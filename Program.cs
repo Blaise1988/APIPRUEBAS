@@ -30,6 +30,8 @@ var app = builder.Build();
 //    app.UseSwaggerUI();
 //}
 
+
+app.MapGet("/", () => Results.Redirect("/swagger"));
 app.UseSwagger();
 app.UseSwaggerUI();
 
